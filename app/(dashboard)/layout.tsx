@@ -1,4 +1,5 @@
 import Navbar from "@/components/navbar";
+import Sidebar from "@/components/sidebar";
 
 const DashBoardLayout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -14,7 +15,7 @@ const DashBoardLayout = ({ children }: { children: React.ReactNode }) => {
       md:inset-y-0
       z-[80]
       bg-gray-900 ">
-        <div>Hello Sidebar</div>
+        <Sidebar />
       </div>
       <main className="md:pl-72 ">
         <Navbar />
