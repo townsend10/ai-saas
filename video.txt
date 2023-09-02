@@ -1,10 +1,13 @@
-4:16
+4:35
 
 OPENAI -> FREE MAS NAO PARA SEMPRE (USADO PARA GERAR CONVERSA IMAGENS)
 REPLICATA AI -> PARA MUSICAS E TEM SEU TESTE GRATUITO MAS AINDA SIM É PAGO
 
 PLANETSCALE -> API COM SQL JUNTO DO PRISMA (TRABALHAR MELHOR COM OUTRO BANCO DE DADOS POSTERIORMENTE)
 
-STRIPE - CRIAR STRIPE
+STRIPE - CRIAR STRIPE tokens  e webhooks -> 4:26 no video
 npx prisma db push -> enviar pro banco de DADOS
 npx prisma generate -> para usar no projeto
+npx prisma migrate reset - apaga tudo do prisma e do banco
+
+4:48 -> erro importante no video que ajuda a entender melhor
