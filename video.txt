@@ -11,3 +11,5 @@ npx prisma generate -> para usar no projeto
 npx prisma migrate reset - apaga tudo do prisma e do banco
 
 4:48 -> erro importante no video que ajuda a entender melhor
+
+no fim do video fala sobre crisp em 5:04 !!
