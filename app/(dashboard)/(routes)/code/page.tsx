@@ -18,8 +18,12 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 import { formSchema } from "./constants";
+import proModal from "@/components/pro-modal";
+import toast from "react-hot-toast";
+import { useProModal } from "@/hooks/use-pro-modal";
 const CodePage = () => {
   const router = useRouter();
+  const proModal = useProModal();
 
   const [messages, setMessages] = useState<ChatCompletionRequestMessage[]>([]);
 
@@ -47,7 +51,11 @@ const CodePage = () => {
 
       form.reset();
     } catch (error: any) {
-      //todo
+      if (error?.response?.status === 403) {
+        proModal.onOpen();
+      } else {
+        toast.error("Something went wrong");
+      }
     } finally {
       router.refresh();
     }
@@ -134,8 +142,7 @@ const CodePage = () => {
                       <code className="bg-black/10 rounded-lg p-1" {...props} />
                     ),
                   }}
-                  className="text-sm overflow-hidden leading-7"
-                  >
+                  className="text-sm overflow-hidden leading-7">
                   {message.content || ""}
                 </ReactMarkdown>
               </div>
